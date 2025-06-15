@@ -41,16 +41,27 @@ def mergeSort(arr):
 
 # Liste zum durchlaufen
 my_list = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+original = my_list.copy()
 
 # Liste vor dem Sortieren visualisieren
-x = range(len(my_list))
-plt.plot(x, my_list)
+plt.figure(figsize=(10, 4))
+plt.bar(range(len(original)), original, color='skyblue')
+plt.title("Vor dem Sortieren")
+plt.xlabel("Index")
+plt.ylabel("Wert")
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.tight_layout()
 plt.show()
 
 # mergeSort aufrufen
 mergeSort(my_list)
 
 # Liste nach dem Sortieren visualisieren
-x = range(len(my_list))
-plt.plot(x, my_list)
+plt.figure(figsize=(10, 4))
+plt.bar(range(len(my_list)), my_list, color='lightgreen')
+plt.title("Nach dem Sortieren")
+plt.xlabel("Index")
+plt.ylabel("Wert")
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.tight_layout()
 plt.show()
